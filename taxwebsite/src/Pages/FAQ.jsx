@@ -14,11 +14,23 @@ const FAQ = () => {
     const faqData = [
         {
             question: 'Does you service need protection?',
-            answer: 'Yes'
+            answer: 'Yes, our Certified Public Accountant (CPA) team will handle any audit issues related to solar deprecation.'
         },
         {
-            question: 'Example',
-            answer: 'No'
+            question: 'Why should we use your service?',
+            answer: 'We enable residential solar owners the ability to depreciate their solar systems, which decrease their overall cost.'
+        },
+        {
+            question: 'How are homeowners able to depreciate their solar system? I thought this was a business deduction.',
+            answer: 'When utilities give you credit for renewable energy that is sent to the grid (NET metering), this is considered a barter arrangement that creates "income" for you. Since renewable energy is generating income, you can depreciate the asset.'
+        },
+        {
+            question: 'If I lease my system, can I claim deprecation?',
+            answer: 'No, you own your system. If you paid cash or have a loan you qualify for the Federal Tax Credit and you are allowed to depreciate you system.'
+        },
+        {
+            question: 'Is it worth it to deprecate my solar array?',
+            answer: 'The typical homeowner will see an additional savings of 19%'
         }
     ]
   return (
@@ -37,7 +49,7 @@ const FAQ = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <div className='question-text'>{faq.question}</div>
-                            <div className='arrow'>{openQuestion.includes(index) ? '▼' : '▶'}</div>
+                            <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
                         </div>
                         {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
                     </div>
