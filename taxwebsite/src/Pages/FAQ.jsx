@@ -35,27 +35,29 @@ const FAQ = () => {
     ]
   return (
     <div>
-        <div>
-            <h2>Frequently Asked Questions</h2>
-            <a href='#'>Support@cleansupport.expert</a>
+        <div className='faq-header'>
+            <div className='faq-header-content'>
+                <h2>Frequently Asked Questions</h2>
+                <a href='#' className='email-link'>support@cleansupport.expert</a>
+            </div>
         </div>
-        <div className='faq-container'>
-            {
-                faqData.map((faq, index) => (
-                    <div key={index} className='faq-item'>
-                        <div
-                            className='question'
-                            onClick={() => toggleQuestion(index)}
-                            style={{ cursor: 'pointer' }}
-                        >
-                            <div className='question-text'>{faq.question}</div>
-                            <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
+            <div className='faq-container'>
+                {
+                    faqData.map((faq, index) => (
+                        <div key={index} className='faq-item'>
+                            <div
+                                className='question'
+                                onClick={() => toggleQuestion(index)}
+                                style={{ cursor: 'pointer' }}
+                            >
+                                <div className='question-text'>{faq.question}</div>
+                                <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
+                            </div>
+                            {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
                         </div>
-                        {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
-                    </div>
-                ))
-            }
-        </div>
+                    ))
+                }
+            </div>
     </div>
   )
 }
