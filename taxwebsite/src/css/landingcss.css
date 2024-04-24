@@ -1,6 +1,6 @@
 /* General body styling */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family:Georgia, 'Times New Roman', Times, serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -21,8 +21,24 @@ body {
   .header p {
     margin: 0.5rem 0;
   }
+
+  .header h2{
+
+    font-size: 24px;
+    text-align: center;
+  }
   
   /* Content block styling */
+  .About{
+
+    text-align:center;
+    margin-top: 2%;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-weight:800;
+    font-size: 36px;
+    
+  }
+
   .content-block {
     display: flex;
     align-items: center;
@@ -46,7 +62,28 @@ body {
   .content-text {
     flex: 1;
     text-align: center;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    
   }
+
+  .content-text h2{
+    font-size: 1.5rem; /* Example: Set the font size */
+  color: #333; /* Example: Set the text color */
+  font-size: 18px;
+  font-weight: 300;
+  
+
+  }
+
+  .content-text p{
+    font-size: 1rem; /* Example: Set the font size */
+    color: #666; /* Example: Set the text color */
+    line-height: 1.6;
+    font-size: 14px;
+    
+
+  }
+
   
   /* Online payment styling */
   .online-payment {
