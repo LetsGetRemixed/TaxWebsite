@@ -1,0 +1,30 @@
+/* FAQ.css */
+.faq-container {
+    margin-top: 20px;
+  }
+  
+  .question {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+    background-color: #f0f0f0;
+    border-radius: 5px;
+  }
+  
+  .question-text {
+    flex: 1; /* Takes up remaining space */
+  }
+  
+  .arrow {
+    font-size: 16px;
+    color: #666;
+  }
+  
+  .answer {
+    margin-top: 10px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border-radius: 5px;
+  }
+  
