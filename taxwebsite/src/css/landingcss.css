@@ -7,25 +7,58 @@ body {
   }
   
   /* Header styling */
-  .header {
-    text-align: center;
-    padding: 2rem;
-    background-color: #f5f5f5;
+  .header-section {
+    background-repeat: no-repeat; /* The image will not repeat */
+  background-position: center center; /* The image will be centered */
+  background-size: cover; /* The image will cover the entire element */
+  height: 800px; /* Full height of the viewport */
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  position: relative;
+  color: #fff;
   }
   
-  .header h1 {
-    margin: 0;
-    font-size: 2.5rem;
+  .header-content {
+    position: absolute;
+  bottom: 25px; /* Adjust as needed */
+  right: 25px; /* Adjust as needed */
+  text-align: center; /* Center the text */
+  background-color: rgba(176, 204, 132, 0.986); /* Light blue background with transparency */
+  border-radius: 50%; /* Makes the container circular */
+  width: 300px; /* Adjust size as needed */
+  height: 300px; /* Adjust size as needed */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
   }
   
-  .header p {
-    margin: 0.5rem 0;
+  .header-content h1 {
+    color: #000000; /* White text */
+  margin-bottom: 1rem;
+  font-size: 24px; /* Large font size */
+  margin-right:10%;
+  margin-left:10%;
+  /* You may need custom font sizing here to fit your design */
   }
-
-  .header h2{
-
-    font-size: 24px;
-    text-align: center;
+  
+  .contact-button {
+    padding: 10px 20px;
+  background-color: #2e2e2e; /* Black background for the button */
+  color: #ffffff; /* White text */
+  border: none;
+  cursor: pointer;
+  text-transform: uppercase; /* Uppercase button text */
+  letter-spacing: 1px; 
+  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5); /* Adds shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease; 
+  }
+  
+  .contact-button:hover {
+    background-color: #000000; /* Change button color on hover to DodgerBlue for example */
+  box-shadow: none; /* Darker shade for hover effect */
   }
   
   /* Content block styling */

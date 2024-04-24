@@ -40,7 +40,9 @@ const LandingPage = () => {
 
 
         <OnlinePayment />
+        <div id = "contact">
         <ContactForm />
+        </div>
         <Subscription />
       </div>
     );

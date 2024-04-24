@@ -2,12 +2,22 @@
 import React from 'react';
 import '../css/landingcss.css';
 const Header = () => {
-    return (
-      <div className="header">
-        <h1>image and bubble here</h1>
+    const scrollToContact = () => {
+        document.getElementById('contact').scrollIntoView({ behavior: 'smooth' });
+      };
     
-      </div>
-    );
-  };
+      return (
+        <header className="header-section" style={{ 
+            backgroundImage: 'url(/images/cover.jpeg)' 
+          }}>
+          <div className="header-content">
+            <h1>Financial Consulting, with a Personal Touch</h1>
+            <button onClick={scrollToContact} className="contact-button">
+              GET IN TOUCH
+            </button>
+          </div>
+        </header>
+      );
+    };
 
   export default Header;
