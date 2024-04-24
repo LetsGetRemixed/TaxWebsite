@@ -5,6 +5,7 @@ import ContactForm from './ContactForm';
 import Subscription from './Subscription';
 import ContentBlock from './Contentblock';
 import Navbar from './Navbar';
+import Footer from './Footer';
 import '../css/landingcss.css';
 
 const LandingPage = () => {
@@ -46,6 +47,7 @@ const LandingPage = () => {
         <ContactForm />
         </div>
         <Subscription />
+        <Footer />
       </div>
     );
   };
