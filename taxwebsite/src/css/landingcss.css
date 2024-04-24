@@ -1,0 +1,157 @@
+/* General body styling */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+  }
+  
+  /* Header styling */
+  .header {
+    text-align: center;
+    padding: 2rem;
+    background-color: #f5f5f5;
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 2.5rem;
+  }
+  
+  .header p {
+    margin: 0.5rem 0;
+  }
+  
+  /* Content block styling */
+  .content-block {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .content-block.left {
+    flex-direction: row; /* Image on left, text on right */
+  }
+  
+  .content-block.right {
+    flex-direction: row-reverse; /* Image on right, text on left */
+  }
+  
+  .content-block img {
+    max-width: 500px;
+    margin: 0 1rem;
+  }
+  
+  .content-text {
+    flex: 1;
+    text-align: center;
+  }
+  
+  /* Online payment styling */
+  .online-payment {
+    background-color: #e9ecef;
+    text-align: center;
+    padding: 1rem;
+    margin: 1rem;
+  }
+  
+  .online-payment button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    margin-top: 1rem;
+    cursor: pointer;
+  }
+  
+  .online-payment button:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Contact form styling */
+  .contact-form {
+    background-color: #f8f9fa;
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .contact-form form {
+    display: grid;
+    grid-gap: 1rem;
+  }
+  
+  .contact-form input {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+  
+  .contact-form button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .contact-form button:hover {
+    background-color: #218838;
+  }
+  
+  /* Subscription section styling */
+  .subscription {
+    background-color: #f5f5f5;
+    text-align: center;
+    padding: 2rem;
+    margin: 1rem;
+  }
+  
+  .subscription input {
+    padding: 0.5rem;
+    font-size: 1rem;
+    margin-right: 0.5rem;
+  }
+  
+  .subscription button {
+    background-color: #17a2b8;
+    color: white;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    cursor: pointer;
+  }
+  
+  .subscription button:hover {
+    background-color: #138496;
+  }
+  
+  /* Utility classes */
+  .btn {
+    display: inline-block;
+    padding: 0.5rem 2rem;
+    margin: 0.5rem 0;
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .btn-primary {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  .btn-primary:hover {
+    background-color: #0056b3;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+    .content-block {
+      flex-direction: column;
+      text-align: center;
+    }
+  
+    .content-block img {
+      margin-bottom: 1rem;
+    }
+  }
+  
