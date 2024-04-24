@@ -4,11 +4,13 @@ import OnlinePayment from './OnlinePayment';
 import ContactForm from './ContactForm';
 import Subscription from './Subscription';
 import ContentBlock from './Contentblock';
+import Navbar from './Navbar';
 import '../css/landingcss.css';
 
 const LandingPage = () => {
     return (
       <div className="landing-page">
+        <Navbar />
         <Header />
         {/* Use ContentBlock component multiple times with different props */}
         <div className='About'>

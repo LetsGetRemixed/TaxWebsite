@@ -1,0 +1,51 @@
+/* Navbar.css */
+.navbar {
+    display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.7); /* Semi-transparent white */
+  padding: 2rem 2rem;
+  position: fixed; /* Fixed position */
+  top: 0;
+  width: 97%;
+  transition: padding 0.3s ease;
+  z-index: 999; /* Ensures navbar stays above other content */
+  }
+
+  .scrolled {
+    padding: 0.5rem 2rem; /* Smaller padding when scrolled */
+    background-color: rgba(255, 255, 255, 0.8); /* Slightly less transparent when scrolled */
+  }
+  
+  .navbar-logo img {
+    height: 60px;
+    display: flex;
+    transition: height 0.3s ease;
+  }
+
+  .navbar.scrolled .navbar-logo img {
+    height: 50px; /* Smaller logo height when scrolled */
+  }
+  
+  .navbar-links {
+    margin-right: 50px; /* Makes the links container take up more space */
+    display: flex;
+    justify-content: flex-end; /* Aligns links to the right */
+    /* Other styles */
+  }
+
+  .navbar-links a {
+    text-decoration: none;
+    color: #000000; /* Adjust to match your link color */
+    padding: 0 1rem; /* Space out the links */
+    font-size: 1rem; /* Adjust to match your design */
+    text-transform: uppercase; /* Makes text uppercase */
+    
+  }
+  
+  .navbar-links a:hover {
+    color: #474747; /* Change color on hover */
+    transform: translateY(-1px);
+    transition: color 0.3s ease, transform 0.3s ease;
+  }
+  
