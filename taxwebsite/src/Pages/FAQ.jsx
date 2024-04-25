@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 import '../css/FAQ.css';
+import Footer from './Footer';
+import Navbar from './Navbar';
 
 const FAQ = () => {
     const [openQuestion, setOpenQuestion] = useState([]);
@@ -35,6 +37,7 @@ const FAQ = () => {
     ]
   return (
     <div>
+            <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
                 <h2>Frequently Asked Questions</h2>
@@ -58,6 +61,7 @@ const FAQ = () => {
                     ))
                 }
             </div>
+            <Footer />
     </div>
   )
 }
