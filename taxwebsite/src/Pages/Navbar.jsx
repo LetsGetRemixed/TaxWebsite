@@ -36,6 +36,7 @@ const Navbar = () => {
         </div>
         <div className="navbar-links">
           <a href="/" style={{fontWeight: 'bold'}}>Home</a>
+          <a href = "/taxcalc"> Tax Calculator </a>
           <a href="/faq">FAQ</a>
         </div>
       </nav>
