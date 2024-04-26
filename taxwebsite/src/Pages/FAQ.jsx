@@ -39,43 +39,44 @@ const FAQ = () => {
     ];
 
     const handleChatButtonClick = () => {
-        setIsChatOpen(true);
+        setIsChatOpen(!isChatOpen); // Toggle isChatOpen state
+    }
+    const handleCloseChat = () => {
+        setIsChatOpen(false); // Close the chat window
     }
 
 
   return (
     <div>
-            <Navbar />
+        <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
                 <h1>Frequently Asked Questions</h1>
                 <a href='#' className='email-link'>support@cleansupport.expert</a>
             </div>
         </div>
-            <div className='faq-container'>
-                {
-                    faqData.map((faq, index) => (
-                        <div key={index} className='faq-item'>
-                            <div
-                                className='question'
-                                onClick={() => toggleQuestion(index)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <div className='question-text'>{faq.question}</div>
-                                <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
-                            </div>
-                            {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
-                        </div>
-                    ))
-                }
-            </div>
-            <button onClick={handleChatButtonClick}> Open Chat </button>
+        <div className='faq-container'>
             {
-                isChatOpen && <ChatWindow onClose={() => setIsChatOpen(false)} />
+                faqData.map((faq, index) => (
+                    <div key={index} className='faq-item'>
+                        <div
+                            className='question'
+                            onClick={() => toggleQuestion(index)}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <div className='question-text'>{faq.question}</div>
+                            <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
+                        </div>
+                        {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
+                    </div>
+                ))
             }
-            <Footer />
+        </div>
+        <button onClick={handleChatButtonClick}>{isChatOpen ? 'Close Chat' : 'Open Chat'}</button>
+        {isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />}
+        <Footer />
     </div>
-  )
+)
 }
 
 export default FAQ

@@ -1,0 +1,48 @@
+/* ChatWindow.css */
+.chat-window {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    transition: transform 0.3s ease;
+    z-index: -1; /* Initially hidden */
+  }
+  
+  .chat-window.open {
+    z-index: 1000; /* Show on top of other content */
+    transform: translateX(0); /* Slide into view */
+  }
+  
+  .chat-header {
+    display: flex;
+    justify-content: flex-end;
+  }
+  
+  .close-button {
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+  
+  .chat-body {
+    margin-top: 10px;
+  }
+  
+  .chat-body input[type="text"] {
+    width: calc(100% - 70px);
+    margin-right: 10px;
+  }
+  
+  .chat-body button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  

@@ -1,6 +1,8 @@
+// ChatWindow.js
 import React, { useState } from 'react';
+import '../css/ChatWindow.css'; // Import CSS for styling
 
-const ChatWindow = ({ onClose }) => {
+const ChatWindow = ({ isOpen, onClose }) => {
   const [userMessage, setUserMessage] = useState('');
 
   const handleUserMessageChange = (e) => {
@@ -13,22 +15,22 @@ const ChatWindow = ({ onClose }) => {
   };
 
   return (
-    <div className='chat-window'>
+    <div className={`chat-window ${isOpen ? 'open' : ''}`}>
       <div className='chat-header'>
-        <button onClick={onClose}> Close </button>
+        <button className='close-button' onClick={onClose}>X</button>
       </div>
       <div className='chat-body'>
-        <p>Questiosn will go here</p>
+        <p>Questions will go here</p>
         <input 
           type='text'
           value={userMessage}
           onChange={handleUserMessageChange}
           placeholder='Type your response...'
         />
-        <button onClick={handleUserMessageSubmit}> Send </button>
+        <button onClick={handleUserMessageSubmit}>Send</button>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default ChatWindow
+export default ChatWindow;
