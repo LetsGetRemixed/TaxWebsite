@@ -91,7 +91,7 @@ const TaxCalculator = () => {
         <div>
             <Navbar/>
             <div className="tax-calculator-container">
-                <h1>Tax Calculator</h1>
+                <h1>Clean Power Calculator</h1>
                 {currentQuestionIndex === -1 ? (
                     <Disclaimer agreed={agreed} onAgreeChange={handleAgreementChange} onStart={handleStart} />
                 ) :
