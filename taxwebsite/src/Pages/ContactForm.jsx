@@ -9,7 +9,7 @@ const ContactForm = () => {
     </div>
     <div className="contact-section">
       <div className="contact-form">
-        <h2>Request a Consultation</h2>
+        <h2>REQUEST A CONSULTATION</h2>
         <form>
           <div className="form-group">
             <input type="text" placeholder="Name" />
@@ -26,9 +26,10 @@ const ContactForm = () => {
         </form>
       </div>
       <div className="contact-info">
-        <h2>Better yet, see us in person!</h2>
+        <h2>BETTER YET, SEE US IN PERSON!</h2>
         <p>Send me a message, and tell me more about your financial goals and needs. I will get back to you soon to schedule a consultation.</p>
-        <h2>Clean Power Pro's Hours</h2>
+        <h2>CLEAN POWER PRO'S</h2>
+        <h2>HOURS</h2>
         <p>Mon: 09:00am - 05:00pm </p>
         <p>Tue: 09:00am - 05:00pm </p>
         <p>Wed: 09:00am - 05:00pm </p>

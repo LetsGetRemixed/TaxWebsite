@@ -1,6 +1,7 @@
 /* General body styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "PT Sans", sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -41,6 +42,7 @@ body {
   font-size: 24px; /* Large font size */
   margin-right:10%;
   margin-left:10%;
+  font-family: "Abril Fatface", serif;
   /* You may need custom font sizing here to fit your design */
   }
   
@@ -66,7 +68,7 @@ body {
 
     text-align:center;
     margin-top: 2%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "Abril Fatface", serif;
     font-weight:800;
     font-size: 36px;
     
@@ -88,14 +90,14 @@ body {
   }
   
   .content-block img {
-    max-width: 500px;
+    max-width: 600px;
     margin: 0 1rem;
   }
   
   .content-text {
     flex: 1;
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "PT Sans", sans-serif;
     
   }
 
@@ -152,17 +154,21 @@ body {
     justify-content: center;
     display: flex;
     font-size: 32px;
-    font-weight: 200;
+    font-weight: 600;
+    font-family: "Abril Fatface", serif;
   }
 
   .contact-form, .contact-info {
     flex: 1;
     margin: 10px;
+    
+    
   }
   
   .contact-form h2, .contact-info h2 {
     margin-bottom: 15px;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: "Abril Fatface", serif;
     
   }
   
@@ -211,6 +217,7 @@ body {
   .contact-info{
     padding: 0 40px;
     text-align:left;
+    font-family: "PT Sans", sans-serif;
   }
   
 
