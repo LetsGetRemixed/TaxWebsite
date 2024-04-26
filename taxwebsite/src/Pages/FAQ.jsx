@@ -40,7 +40,7 @@ const FAQ = () => {
             <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
-                <h2>Frequently Asked Questions</h2>
+                <h1>Frequently Asked Questions</h1>
                 <a href='#' className='email-link'>support@cleansupport.expert</a>
             </div>
         </div>
