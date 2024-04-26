@@ -16,6 +16,23 @@
     display: flex;
     justify-content: flex-end;
   }
+
+  .message {
+    margin-bottom: 10px;
+    padding: 8px 12px;
+    border-radius: 15px;
+    clear: both;
+  }
+
+  .user-message {
+    background-color: #007bff;
+    float: right;
+  }
+
+  .question-message {
+    background-color: aqua;
+    float: left;
+  }
   
   .close-button {
     background: none;
