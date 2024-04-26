@@ -43,6 +43,7 @@ body {
   margin-right:10%;
   margin-left:10%;
   font-family: "Abril Fatface", serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   /* You may need custom font sizing here to fit your design */
   }
   
@@ -71,6 +72,7 @@ body {
     font-family: "Abril Fatface", serif;
     font-weight:800;
     font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     
   }
 
@@ -156,6 +158,7 @@ body {
     font-size: 32px;
     font-weight: 600;
     font-family: "Abril Fatface", serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
 
   .contact-form, .contact-info {
