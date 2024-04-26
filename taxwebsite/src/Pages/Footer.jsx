@@ -8,7 +8,7 @@ const Footer = () => {
         <span>Clean Power Pro's</span>
         <div className="footer-rights">
           <p>Copyright © 2024 Clean Power Pro's - All Rights Reserved.</p>
-          <p>Website Created by: Colby Person</p>
+          <p>Website Created by: Colby Person, Isaiah Gage</p>
         </div>
       </div>
     </footer>

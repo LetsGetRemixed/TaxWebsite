@@ -25,14 +25,15 @@
     align-items: center;
     margin-bottom: 20rem;
   }
-  
+  .faq-item {
+    border-radius: 5px;
+    border-bottom: 1px solid #ccc;
+  }
   .question {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px;
-    border-radius: 5px;
-    border-bottom: 1px solid #ccc;
+    padding: 15px;
   }
   
   .question-text {
@@ -40,6 +41,7 @@
     cursor: pointer;
     color: #333;
     transition: color 0.3s;
+    font-size: 23px;
   }
 
   .question-text:hover {
