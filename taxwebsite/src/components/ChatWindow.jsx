@@ -49,14 +49,17 @@ const ChatWindow = ({ isOpen, onClose }) => {
             </div>
           ))
         }
-        <input 
-          type='text'
-          value={userMessage}
-          onChange={handleUserMessageChange}
-          placeholder='Enter your question or message here'
-        />
-        <button onClick={handleUserMessageSubmit}>Send</button>
       </div>
+      <div className="input-container">
+          <input 
+            type='text'
+            value={userMessage}
+            onChange={handleUserMessageChange}
+            placeholder='Enter your question or message here'
+            className='input-field'
+          />
+          <button onClick={handleUserMessageSubmit} className='send-button'>Send</button>
+        </div>
     </div>
   );
 };
