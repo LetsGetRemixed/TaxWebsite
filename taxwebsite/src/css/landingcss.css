@@ -93,7 +93,7 @@ body {
   }
   
   .content-block img {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 1rem;
   }
   
@@ -109,8 +109,6 @@ body {
   color: #333; /* Example: Set the text color */
   font-size: 18px;
   font-weight: 300;
-  
-
   }
 
   .content-text p{
@@ -118,8 +116,51 @@ body {
     color: #666; /* Example: Set the text color */
     line-height: 1.6;
     font-size: 14px;
-    
+  }
 
+  @media (max-width: 768px) {
+    .About {
+      font-size: 24px; /* Smaller font size for smaller screens */
+      margin-top: 5%; /* Adjust top margin if needed */
+    }
+  
+    .content-block {
+      flex-direction: column; /* Stack image and text on smaller screens */
+      margin: 1rem 1rem; /* Adjust margin for smaller screens */
+    }
+  
+    .content-block img {
+      max-width: 300px; /* Make image responsive */
+      margin-bottom: 1rem; /* Space between image and text */
+    }
+  
+    .content-text h2 {
+      font-size: 1.2rem; /* Adjust heading font size for smaller screens */
+    }
+  
+    .content-text p {
+      font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
+    }
+  }
+  
+  /* Adjustments for even smaller screens */
+  @media (max-width: 480px) {
+    .About {
+      font-size: 20px; /* Even smaller font size for mobile */
+      margin-top: 10%; /* Adjust top margin if needed */
+    }
+  
+    .content-block {
+      margin: 1rem; /* Reduced margin for mobile screens */
+    }
+  
+    .content-text h2 {
+      font-size: 1rem; /* Adjust heading font size for mobile */
+    }
+  
+    .content-text p {
+      font-size: 0.8rem; /* Adjust paragraph font size for mobile */
+    }
   }
 
   
@@ -134,7 +175,7 @@ body {
 }
 
 .online-payment-image img {
-    max-width: 600px;
+    max-width: 550px;
     margin: 0 1rem;
     height: auto;
     display: block; /* Remove spacing under the image */
@@ -176,7 +217,7 @@ body {
   background-color: rgb(140, 163, 103);
 }
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .online-payment-section {
         flex-direction: column;
         text-align: center;
@@ -196,6 +237,13 @@ body {
     background-color: #ffffff; /* Or any other color you prefer */
     margin: 0 10rem;
   }
+
+  @media (max-width: 768px) {
+    .contact-section{
+    margin: 0 1rem;
+    }
+  }
+
   
   .contact-header{
     align-items: center;
