@@ -73,7 +73,10 @@ const FAQ = () => {
             }
         </div>
         <button onClick={handleChatButtonClick}>{isChatOpen ? 'Close Chat' : 'Open Chat'}</button>
-        {isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />}
+        {
+            // If isOpen then display the chat
+            isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />
+        }
         <Footer />
     </div>
 )

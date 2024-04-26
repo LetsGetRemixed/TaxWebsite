@@ -9,14 +9,9 @@
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     padding: 10px;
     transition: transform 0.3s ease;
-    z-index: -1; /* Initially hidden */
+    z-index: 1000;
   }
-  
-  .chat-window.open {
-    z-index: 1000; /* Show on top of other content */
-    transform: translateX(0); /* Slide into view */
-  }
-  
+
   .chat-header {
     display: flex;
     justify-content: flex-end;

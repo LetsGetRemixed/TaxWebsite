@@ -15,7 +15,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
   };
 
   return (
-    <div className={`chat-window ${isOpen ? 'open' : ''}`}>
+    <div className='chat-window'>
       <div className='chat-header'>
         <button className='close-button' onClick={onClose}>X</button>
       </div>
