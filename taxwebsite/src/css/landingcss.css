@@ -1,6 +1,7 @@
 /* General body styling */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 body {
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "PT Sans", sans-serif;
     margin: 0;
     padding: 0;
     line-height: 1.6;
@@ -11,7 +12,7 @@ body {
     background-repeat: no-repeat; /* The image will not repeat */
   background-position: center center; /* The image will be centered */
   background-size: cover; /* The image will cover the entire element */
-  height: 800px; /* Full height of the viewport */
+  height: 600px; /* Full height of the viewport */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -41,18 +42,21 @@ body {
   font-size: 24px; /* Large font size */
   margin-right:10%;
   margin-left:10%;
+  font-family: "Abril Fatface", serif;
+  text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.5);
   /* You may need custom font sizing here to fit your design */
   }
   
   .contact-button {
     padding: 10px 20px;
-  background-color: #2e2e2e; /* Black background for the button */
+  background-color: #2d2d2d; /* Black background for the button */
   color: #ffffff; /* White text */
   border: none;
+  border-radius: 0px;
   cursor: pointer;
   text-transform: uppercase; /* Uppercase button text */
   letter-spacing: 1px; 
-  box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5); /* Adds shadow */
+  box-shadow: 5px 5px 2px rgba(0, 0, 0, 0.5); /* Adds shadow */
   transition: background-color 0.3s ease, box-shadow 0.3s ease; 
   }
   
@@ -66,9 +70,10 @@ body {
 
     text-align:center;
     margin-top: 2%;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "Abril Fatface", serif;
     font-weight:800;
     font-size: 36px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
     
   }
 
@@ -76,7 +81,7 @@ body {
     display: flex;
     align-items: center;
     padding: 1rem;
-    margin: 1rem;
+    margin: 1rem 10rem;
   }
   
   .content-block.left {
@@ -88,14 +93,14 @@ body {
   }
   
   .content-block img {
-    max-width: 500px;
+    max-width: 550px;
     margin: 0 1rem;
   }
   
   .content-text {
     flex: 1;
     text-align: center;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    font-family: "PT Sans", sans-serif;
     
   }
 
@@ -104,8 +109,6 @@ body {
   color: #333; /* Example: Set the text color */
   font-size: 18px;
   font-weight: 300;
-  
-
   }
 
   .content-text p{
@@ -113,31 +116,118 @@ body {
     color: #666; /* Example: Set the text color */
     line-height: 1.6;
     font-size: 14px;
-    
+  }
 
+  @media (max-width: 768px) {
+    .About {
+      font-size: 24px; /* Smaller font size for smaller screens */
+      margin-top: 5%; /* Adjust top margin if needed */
+    }
+  
+    .content-block {
+      flex-direction: column; /* Stack image and text on smaller screens */
+      margin: 1rem 1rem; /* Adjust margin for smaller screens */
+    }
+  
+    .content-block img {
+      max-width: 300px; /* Make image responsive */
+      margin-bottom: 1rem; /* Space between image and text */
+    }
+  
+    .content-text h2 {
+      font-size: 1.2rem; /* Adjust heading font size for smaller screens */
+    }
+  
+    .content-text p {
+      font-size: 0.9rem; /* Adjust paragraph font size for smaller screens */
+    }
+  }
+  
+  /* Adjustments for even smaller screens */
+  @media (max-width: 480px) {
+    .About {
+      font-size: 20px; /* Even smaller font size for mobile */
+      margin-top: 10%; /* Adjust top margin if needed */
+    }
+  
+    .content-block {
+      margin: 1rem; /* Reduced margin for mobile screens */
+    }
+  
+    .content-text h2 {
+      font-size: 1rem; /* Adjust heading font size for mobile */
+    }
+  
+    .content-text p {
+      font-size: 0.8rem; /* Adjust paragraph font size for mobile */
+    }
   }
 
   
   /* Online payment styling */
-  .online-payment {
-    background-color: #e9ecef;
-    text-align: center;
+  .online-payment-section {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     padding: 1rem;
-    margin: 1rem;
-  }
-  
-  .online-payment button {
-    background-color: #007bff;
-    color: white;
-    border: none;
-    padding: 0.5rem 1.5rem;
-    margin-top: 1rem;
+    margin: 5rem 10rem;
+    background-color: #ffffff; /* Example background color */
+}
+
+.online-payment-image img {
+    max-width: 550px;
+    margin: 0 1rem;
+    height: auto;
+    display: block; /* Remove spacing under the image */
+}
+
+.online-payment-content {
+    flex: 1;
+    padding-left: 20px; /* Space between image and text */
+}
+
+.online-payment-content h2 {
+    font-size: 36px;
+    font-weight: 800px;
+    color: #000000;
+    margin-bottom: 8px;
+    font-family: "Abril Fatface", serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+}
+
+.online-payment-content p {
+    font-size: 24px;
+    color: #666;
+}
+
+.online-payment-content button {
+  background-color: rgba(176, 204, 132);
+    color: rgb(0, 0, 0);
+    border-radius: 0px;
+    padding: 30px 100px;
+    box-shadow: 5px 5px 1px rgb(73, 73, 73, .5);
+    text-transform: uppercase;
+    font-weight: 600;
     cursor: pointer;
-  }
-  
-  .online-payment button:hover {
-    background-color: #0056b3;
-  }
+    font-size: 24px;
+    transition: background-color 0.3s ease;
+}
+
+.online-payment-content button:hover {
+  background-color: rgb(140, 163, 103);
+}
+
+@media (max-width: 768px) {
+    .online-payment-section {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .online-payment-content {
+        padding-left: 0;
+        padding-top: 20px;
+    }
+}
   
   /* Contact form styling */
   .contact-section {
@@ -145,24 +235,37 @@ body {
     justify-content: space-between;
     padding: 20px;
     background-color: #ffffff; /* Or any other color you prefer */
+    margin: 0 10rem;
   }
+
+  @media (max-width: 768px) {
+    .contact-section{
+    margin: 0 1rem;
+    }
+  }
+
   
   .contact-header{
     align-items: center;
     justify-content: center;
     display: flex;
-    font-size: 32px;
-    font-weight: 200;
+    font-size: 36px;
+    font-weight: 600;
+    font-family: "Abril Fatface", serif;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
   }
 
   .contact-form, .contact-info {
     flex: 1;
     margin: 10px;
+    
+    
   }
   
   .contact-form h2, .contact-info h2 {
     margin-bottom: 15px;
-    font-weight: 400;
+    font-weight: 300;
+    font-family: "Abril Fatface", serif;
     
   }
   
@@ -194,13 +297,13 @@ body {
     padding: 20px 55px;
     background-color: rgba(176, 204, 132); /* Adjust to your theme color */
     border: none;
-    border-radius: 4px;
+    border-radius: 0px;
     cursor: pointer;
     color: rgb(0, 0, 0);
     font-size: 1rem;
     text-transform: uppercase; /* To match the button style in the image */
     font-weight: 700;
-    box-shadow: 3px 3px 5px 0px rgba(0, 0, 0, 0.5);
+    box-shadow: 4px 4px 1px rgb(73, 73, 73,.5);
     
   }
   
@@ -211,6 +314,7 @@ body {
   .contact-info{
     padding: 0 40px;
     text-align:left;
+    font-family: "PT Sans", sans-serif;
   }
   
 

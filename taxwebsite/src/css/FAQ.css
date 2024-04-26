@@ -1,8 +1,14 @@
 /* FAQ.css */
+.faq-page {
+  background-color: rgb(255, 255, 255);
+}
+
 .faq-header {
     text-align: center;
     margin-bottom: 30px;
     margin-top: 10rem;
+    font-family: "Abril Fatface", serif;
+    text-shadow: 1px 1px 1px rgba(0,0,0,0.5);
 }
 
 .faq-header-content {
@@ -42,6 +48,7 @@
     color: #333;
     transition: color 0.3s;
     font-size: 23px;
+    font-family: "PT Sans", sans-serif;
     
   }
 

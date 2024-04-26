@@ -36,7 +36,7 @@ const FAQ = () => {
         }
     ]
   return (
-    <div>
+    <div className = "faq-page">
             <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
