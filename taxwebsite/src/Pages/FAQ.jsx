@@ -2,9 +2,11 @@ import React, { useState } from 'react';
 import '../css/FAQ.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import ChatWindow from '../components/ChatWindow';
 
 const FAQ = () => {
     const [openQuestion, setOpenQuestion] = useState([]);
+    const [isChatOpen, setIsChatOpen] = useState(false);
     const toggleQuestion = (index) => {
         // Show FAQ questions and answers that are open 
         if (openQuestion.includes(index)) {
@@ -34,7 +36,13 @@ const FAQ = () => {
             question: 'Is it worth it to deprecate my solar array?',
             answer: 'The typical homeowner will see an additional savings of 19%'
         }
-    ]
+    ];
+
+    const handleChatButtonClick = () => {
+        setIsChatOpen(true);
+    }
+
+
   return (
     <div>
             <Navbar />
@@ -61,6 +69,10 @@ const FAQ = () => {
                     ))
                 }
             </div>
+            <button onClick={handleChatButtonClick}> Open Chat </button>
+            {
+                isChatOpen && <ChatWindow onClose={() => setIsChatOpen(false)} />
+            }
             <Footer />
     </div>
   )
