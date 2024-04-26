@@ -12,7 +12,7 @@ body {
     background-repeat: no-repeat; /* The image will not repeat */
   background-position: center center; /* The image will be centered */
   background-size: cover; /* The image will cover the entire element */
-  height: 800px; /* Full height of the viewport */
+  height: 600px; /* Full height of the viewport */
   display: flex;
   justify-content: flex-end;
   align-items: center;
