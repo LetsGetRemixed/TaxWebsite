@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import Navbar from '../Pages/Navbar';
 import Footer from '../Pages/Footer';
+import Disclaimer from '../TaxCalculator/Disclaimer';
 import '../css/Taxquestions.css';
 
 const questions = [
@@ -25,9 +26,10 @@ const questions = [
 
 
 const TaxCalculator = () => {
-    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
+    const [currentQuestionIndex, setCurrentQuestionIndex] = useState(-1);
     const [answers, setAnswers] = useState({});
     const [completed, setCompleted] = useState(false);
+    const [agreed, setAgreed] = useState(false);
 
     const handleAnswer = (answer) => {
         const field = questions[currentQuestionIndex].field;
@@ -74,12 +76,26 @@ const TaxCalculator = () => {
         }
     };
 
+    const handleAgreementChange = (event) => {
+        setAgreed(event.target.checked);
+    };
+
+    const handleStart = () => {
+        if (agreed) {
+            setCurrentQuestionIndex(0);  // Move to the first question after agreement
+        }
+    };
+
+
     return (
         <div>
             <Navbar/>
             <div className="tax-calculator-container">
                 <h1>Tax Calculator</h1>
-                {!completed ? (
+                {currentQuestionIndex === -1 ? (
+                    <Disclaimer agreed={agreed} onAgreeChange={handleAgreementChange} onStart={handleStart} />
+                ) :
+                !completed ? (
                     <div>
                         <p className = "questions">{questions[currentQuestionIndex].text}</p>
                         <p className="description">{renderDescription(questions[currentQuestionIndex].description)}</p>
