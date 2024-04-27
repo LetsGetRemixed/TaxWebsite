@@ -33,7 +33,7 @@
 }
 
 .sub-heading {
-  margin-top: 10px;
+  margin-top: 0px;
   text-align: center;
 }
 
@@ -87,6 +87,7 @@
   border-bottom: none !important; /* Remove border on the bottom */
   border-left: none !important; /* Remove border on the left */
   background-color: white !important;
+  outline: none;
 }
 
 .send-button {

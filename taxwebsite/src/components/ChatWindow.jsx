@@ -36,8 +36,8 @@ const ChatWindow = ({ isOpen, onClose }) => {
     <div className='chat-window'>
       <div className='heading-section'>
         <div className='chat-header'>
-          <h6 className='contact-us'>Contact Us</h6>
-          <button className='close-button' onClick={onClose}>X</button>
+          <p className='contact-us'>Contact Us</p>
+          <button className='close-button' onClick={onClose}>▼</button>
         </div>
         <p className="sub-heading">We'll respond as soon as we can.</p>
       </div>
