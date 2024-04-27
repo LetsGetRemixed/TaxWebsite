@@ -34,8 +34,12 @@ const ChatWindow = ({ isOpen, onClose }) => {
 
   return (
     <div className='chat-window'>
-      <div className='chat-header'>
-        <button className='close-button' onClick={onClose}>X</button>
+      <div className='heading-section'>
+        <div className='chat-header'>
+          <h6 className='contact-us'>Contact Us</h6>
+          <button className='close-button' onClick={onClose}>X</button>
+        </div>
+        <p className="sub-heading">We'll respond as soon as we can.</p>
       </div>
       <div className='chat-body'>
         {
