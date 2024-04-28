@@ -1,5 +1,5 @@
 // ChatWindow.js
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import '../css/ChatWindow.css'; // Import CSS for styling
 
 // Format Date
@@ -19,16 +19,26 @@ const ChatWindow = ({ isOpen, onClose }) => {
   const [email, setEmail] = useState('');
   const [name, setName] = useState('');
   const [isInputEmpty, setIsInputEmpty] = useState(true);
+  const [userQuestion, setUserQuestion] = useState('');
+  
   
   const questions = [
     "Let me know if you have any questions!",
-    "Please enter you eamil and name",
+    "Please enter you email and name",
     "Hi! Please enter your question and don't leave out any details. This will help get your question fully answered as soon as possible.",
     "Thanks! Your message has been submitted. We'll get back to you here or via email. We'll respond as soon as we can"
   ];
 
   const [messages, setMessages] = useState([{ text: questions[questionIndex], sender: 'chatbot', timestamp: new Date() }]);
-
+  
+  // This is where we will send email
+  useEffect(() => {
+    // Check if the last message matches when we want to send email
+    if (messages.length > 0 && messages[messages.length - 1].text === questions[3]) {
+      console.log('User Question:', userQuestion);
+    }
+  }, [messages, userQuestion]);
+  
 
   const handleUserMessageChange = (e) => {
     setUserMessage(e.target.value);
@@ -44,7 +54,6 @@ const ChatWindow = ({ isOpen, onClose }) => {
   };
 
   const handleUserMessageSubmit = () => {
-    console.log("User Message:", userMessage);
     let newMessages;
     if (questionIndex === 1) {
       // If the current question is asking for email and name
@@ -54,6 +63,10 @@ const ChatWindow = ({ isOpen, onClose }) => {
       ];
     } else {
       newMessages = [...messages];
+    }
+
+    if (questionIndex === 2) {
+      setUserQuestion(userMessage);
     }
     // Add the user message if it's not empty
     if (userMessage.trim() !== '') {
@@ -66,8 +79,10 @@ const ChatWindow = ({ isOpen, onClose }) => {
       setQuestionIndex(prevIndex => prevIndex + 1);
       // Add the next question to the array of messages to display
       setMessages(prevMessages => [...prevMessages, { text: questions[questionIndex + 1], sender: 'chatbot', timestamp: new Date() }]);
-    }
+    } 
   };
+
+  
   
   
   return (
@@ -99,14 +114,14 @@ const ChatWindow = ({ isOpen, onClose }) => {
                         value={email}
                         onChange={handleEmailChange}
                         placeholder='Enter your email'
-                        className='input-field'
+                        className='input-field-email-name'
                       />
                       <input 
                         type='text'
                         value={name}
                         onChange={handleNameChange}
                         placeholder='Enter your name'
-                        className='input-field'
+                        className='input-field-email-name'
                       />
                       <button onClick={() => {
                         handleUserMessageSubmit();

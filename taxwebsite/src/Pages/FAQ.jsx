@@ -33,7 +33,7 @@ const FAQ = () => {
             answer: 'No, you own your system. If you paid cash or have a loan you qualify for the Federal Tax Credit and you are allowed to depreciate you system.'
         },
         {
-            question: 'Is it worth it to deprecate my solar array?',
+            question: 'Is it worth it to depreciate my solar array?',
             answer: 'The typical homeowner will see an additional savings of 19%'
         }
     ];
