@@ -72,6 +72,7 @@
   border-bottom-right-radius: 0px;
   align-self: flex-end; /* Align to the right */
   margin-right: 10px; /* Add some margin for spacing */
+  margin-left: 10px;
   font-size: 15px;
   color: #696969;
   font-family: sans-serif;

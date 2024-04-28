@@ -33,7 +33,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
   
   // This is where we will send email
   useEffect(() => {
-    // Check if the last message matches when we want to send email
+    // Check if the last message matches questions[3]: this is when we will send email
     if (messages.length > 0 && messages[messages.length - 1].text === questions[3]) {
       console.log('User Question:', userQuestion);
     }
