@@ -4,6 +4,8 @@ import Footer from './Footer';
 import Navbar from './Navbar';
 import ChatWindow from '../components/ChatWindow';
 import { FiMessageSquare } from "react-icons/fi";
+import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa6";
 
 const FAQ = () => {
     const [openQuestion, setOpenQuestion] = useState([]);
@@ -66,7 +68,7 @@ const FAQ = () => {
                             style={{ cursor: 'pointer' }}
                         >
                             <div className='question-text'>{faq.question}</div>
-                            <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
+                            <div className='arrow'>{openQuestion.includes(index) ? <FaChevronUp /> : <FaChevronDown />}</div>
                         </div>
                         {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
                     </div>

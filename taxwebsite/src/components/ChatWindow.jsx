@@ -23,6 +23,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
   const [name, setName] = useState('');
   const [isInputEmpty, setIsInputEmpty] = useState(true);
   const [userQuestion, setUserQuestion] = useState('');
+  const [isEmailNameFilled, setIsEmailNameFilled] = useState(false);
   
   
   const questions = [
@@ -50,13 +51,19 @@ const ChatWindow = ({ isOpen, onClose }) => {
 
   const handleEmailChange = (e) => {
     setEmail(e.target.value);
+    setIsEmailNameFilled(e.target.value.trim() !== '' && name.trim() !== '');
   };
 
   const handleNameChange = (e) => {
     setName(e.target.value);
+    setIsEmailNameFilled(e.target.value.trim() !== '' && email.trim() !== '');
   };
 
   const handleUserMessageSubmit = () => {
+    if (isInputEmpty || (questionIndex === 1 && !isEmailNameFilled) || (questionIndex === 2 && userMessage.trim() === '')) {
+      return;
+    }
+    console.log("User Message", userMessage);
     let newMessages;
     if (questionIndex === 1) {
       // If the current question is asking for email and name
@@ -85,9 +92,6 @@ const ChatWindow = ({ isOpen, onClose }) => {
     } 
   };
 
-  
-  
-  
   return (
     <div className='chat-window'>
       <div className='heading-section'>
@@ -128,7 +132,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
                       />
                       <button onClick={() => {
                         handleUserMessageSubmit();
-                      }} className='send-button'>  <IoMdSend /> </button>
+                      }} className='send-button' disabled={!isEmailNameFilled}>  <IoMdSend /> </button>
                     </div>
                   ) : (
                     <div>{message.text}</div>
