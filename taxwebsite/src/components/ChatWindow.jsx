@@ -1,6 +1,9 @@
 // ChatWindow.js
 import React, { useState, useEffect } from 'react';
 import '../css/ChatWindow.css'; // Import CSS for styling
+import { IoMdSend } from "react-icons/io";
+import { FaChevronDown } from "react-icons/fa";
+import { GiConfirmed } from "react-icons/gi";
 
 // Format Date
 const formatDate = (date) => {
@@ -59,7 +62,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
       // If the current question is asking for email and name
       newMessages = [
         ...messages,
-        { text: `Name: ${name}, Email: ${email}`, sender: 'user', timestamp: new Date() }
+        { text: ` ${name}, ${email}`, sender: 'user', timestamp: new Date() }
       ];
     } else {
       newMessages = [...messages];
@@ -90,7 +93,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
       <div className='heading-section'>
         <div className='chat-header'>
           <p className='contact-us'>Contact Us</p>
-          <button className='close-button' onClick={onClose}>▼</button>
+          <button className='close-button' onClick={onClose}> <FaChevronDown /> </button>
         </div>
         <p className="sub-heading">We'll respond as soon as we can.</p>
       </div>
@@ -125,7 +128,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
                       />
                       <button onClick={() => {
                         handleUserMessageSubmit();
-                      }} className='send-button'>Send</button>
+                      }} className='send-button'>  <IoMdSend /> </button>
                     </div>
                   ) : (
                     <div>{message.text}</div>
@@ -148,7 +151,7 @@ const ChatWindow = ({ isOpen, onClose }) => {
             placeholder='Enter your question or message here'
             className='input-field'
           />
-          <button onClick={handleUserMessageSubmit} className='send-button' disabled={isInputEmpty}>Send</button>
+          <button onClick={handleUserMessageSubmit} className='send-button' disabled={isInputEmpty}> <IoMdSend /> </button>
         </div>
     </div>
   );

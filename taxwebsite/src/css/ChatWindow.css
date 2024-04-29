@@ -1,9 +1,9 @@
 /* ChatWindow.css */
 .chat-window {
   position: fixed;
-  height: 650px;
+  height: 625px;
   width: 400px;
-  bottom: 20px;
+  bottom: 80px;
   right: 20px;
   background-color: #fff;
   border-radius: 15px;
@@ -150,4 +150,6 @@
   border-radius: 20px;
   cursor: pointer;
   height: 40px;
+  width: 40px;
+  font-size: 14px;
 }

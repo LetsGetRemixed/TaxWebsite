@@ -3,6 +3,7 @@ import '../css/FAQ.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
 import ChatWindow from '../components/ChatWindow';
+import { FiMessageSquare } from "react-icons/fi";
 
 const FAQ = () => {
     const [openQuestion, setOpenQuestion] = useState([]);
@@ -72,7 +73,7 @@ const FAQ = () => {
                 ))
             }
         </div>
-        <button onClick={handleChatButtonClick}>{isChatOpen ? 'Close Chat' : 'Open Chat'}</button>
+        <button className='chatbot-button' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>
         {
             // If isOpen then display the chat
             isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />
