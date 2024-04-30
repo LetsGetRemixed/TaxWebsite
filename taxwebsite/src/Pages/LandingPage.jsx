@@ -7,7 +7,6 @@ import ContentBlock from './Contentblock';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import '../css/landingcss.css';
-import '../css/FAQ.css';
 import ChatWindow from '../components/ChatWindow';
 import { FiMessageSquare } from "react-icons/fi";
 
@@ -61,7 +60,7 @@ const LandingPage = () => {
         <Subscription />
         <Footer />
       </div>
-      <button className='chatbot-button' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>
+      <button className='chatbot-button-landing' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>
         {
             // If isOpen then display the chat
             isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />

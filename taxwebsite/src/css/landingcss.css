@@ -376,3 +376,21 @@ body {
     }
   }
   
+  .chatbot-button-landing {
+    position: fixed !important;
+    bottom: 15px !important;
+    right: 20px !important;
+    z-index: 999; /* Ensure it's above other elements */
+    height: 58px !important;
+    width: 58px !important;
+    padding-top: 8px !important;
+    padding-bottom: 5px !important;
+    padding-left: 6px !important;
+    padding-right: 5px !important;
+    font-size: 26px !important;
+    cursor: pointer !important;
+    border-radius: 50% !important;
+    background-color: rgba(176, 204, 132, 0.8);;
+    border: 2px rgba(176, 204, 132, 0.8);
+    color: #696969;
+}
