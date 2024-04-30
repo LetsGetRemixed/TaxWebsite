@@ -2,9 +2,14 @@ import React, { useState } from 'react';
 import '../css/FAQ.css';
 import Footer from './Footer';
 import Navbar from './Navbar';
+import ChatWindow from '../components/ChatWindow';
+import { FiMessageSquare } from "react-icons/fi";
+import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa6";
 
 const FAQ = () => {
     const [openQuestion, setOpenQuestion] = useState([]);
+    const [isChatOpen, setIsChatOpen] = useState(false);
     const toggleQuestion = (index) => {
         // Show FAQ questions and answers that are open 
         if (openQuestion.includes(index)) {
@@ -31,39 +36,52 @@ const FAQ = () => {
             answer: 'No, you own your system. If you paid cash or have a loan you qualify for the Federal Tax Credit and you are allowed to depreciate you system.'
         },
         {
-            question: 'Is it worth it to deprecate my solar array?',
+            question: 'Is it worth it to depreciate my solar array?',
             answer: 'The typical homeowner will see an additional savings of 19%'
         }
-    ]
+    ];
+
+    const handleChatButtonClick = () => {
+        setIsChatOpen(!isChatOpen); // Toggle isChatOpen state
+    }
+    const handleCloseChat = () => {
+        setIsChatOpen(false); // Close the chat window
+    }
+
+
   return (
     <div className = "faq-page">
-            <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
                 <h1>Frequently Asked Questions</h1>
                 <a href='#' className='email-link'>support@cleansupport.expert</a>
             </div>
         </div>
-            <div className='faq-container'>
-                {
-                    faqData.map((faq, index) => (
-                        <div key={index} className='faq-item'>
-                            <div
-                                className='question'
-                                onClick={() => toggleQuestion(index)}
-                                style={{ cursor: 'pointer' }}
-                            >
-                                <div className='question-text'>{faq.question}</div>
-                                <div className='arrow'>{openQuestion.includes(index) ? '▲' : '▼'}</div>
-                            </div>
-                            {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
+        <div className='faq-container'>
+            {
+                faqData.map((faq, index) => (
+                    <div key={index} className='faq-item'>
+                        <div
+                            className='question'
+                            onClick={() => toggleQuestion(index)}
+                            style={{ cursor: 'pointer' }}
+                        >
+                            <div className='question-text'>{faq.question}</div>
+                            <div className='arrow'>{openQuestion.includes(index) ? <FaChevronUp /> : <FaChevronDown />}</div>
                         </div>
-                    ))
-                }
-            </div>
-            <Footer />
+                        {openQuestion.includes(index) && <div className='answer'> {faq.answer} </div>}
+                    </div>
+                ))
+            }
+        </div>
+        <button className='chatbot-button' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>
+        {
+            // If isOpen then display the chat
+            isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />
+        }
+        <Footer />
     </div>
-  )
+)
 }
 
 export default FAQ

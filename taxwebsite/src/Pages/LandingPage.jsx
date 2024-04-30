@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import Header from './Header';
 import OnlinePayment from './OnlinePayment';
 import ContactForm from './ContactForm';
@@ -7,8 +7,19 @@ import ContentBlock from './Contentblock';
 import Navbar from './Navbar';
 import Footer from './Footer';
 import '../css/landingcss.css';
+import ChatWindow from '../components/ChatWindow';
+import { FiMessageSquare } from "react-icons/fi";
+import { FaChevronDown } from "react-icons/fa";
+import { FaChevronUp } from "react-icons/fa6";
 
 const LandingPage = () => {
+  const [isChatOpen, setIsChatOpen] = useState(false);
+  const handleChatButtonClick = () => {
+    setIsChatOpen(!isChatOpen); // Toggle isChatOpen state
+  }
+  const handleCloseChat = () => {
+      setIsChatOpen(false); // Close the chat window
+  }
     return (
       <div className="landing-page">
         <Navbar />
@@ -47,6 +58,11 @@ const LandingPage = () => {
         <ContactForm />
         </div>
         <Subscription />
+        <button className='chatbot-button' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>
+        {
+            // If isOpen then display the chat
+            isChatOpen && <ChatWindow isOpen={isChatOpen} onClose={handleCloseChat} />
+        }
         <Footer />
       </div>
     );
