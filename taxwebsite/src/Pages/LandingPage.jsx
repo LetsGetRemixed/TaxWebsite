@@ -2,11 +2,11 @@ import React, {useState} from 'react';
 import Header from './Header';
 import OnlinePayment from './OnlinePayment';
 import ContactForm from './ContactForm';
-import Subscription from './Subscription';
 import ContentBlock from './Contentblock';
+import '../css/landingcss.css';
 import Navbar from './Navbar';
 import Footer from './Footer';
-import '../css/landingcss.css';
+
 import ChatWindow from '../components/ChatWindow';
 import { FiMessageSquare } from "react-icons/fi";
 
@@ -57,7 +57,7 @@ const LandingPage = () => {
         <div id = "contact">
         <ContactForm />
         </div>
-        <Subscription />
+        
         <Footer />
       </div>
       <button className='chatbot-button-landing' onClick={handleChatButtonClick}>{isChatOpen ? 'X' : <FiMessageSquare />}</button>

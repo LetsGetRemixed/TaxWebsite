@@ -51,6 +51,7 @@ const FAQ = () => {
 
   return (
     <div className = "faq-page">
+        <Navbar />
         <div className='faq-header'>
             <div className='faq-header-content'>
                 <h1>Frequently Asked Questions</h1>
