@@ -50,3 +50,7 @@
     transition: color 0.3s ease, transform 0.3s ease;
   }
   
+  .navbar-links a.active-link {
+    font-weight: 900;
+    font-size: 32px;
+}

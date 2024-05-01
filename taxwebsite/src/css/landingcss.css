@@ -6,6 +6,10 @@ body {
     padding: 0;
     line-height: 1.6;
   }
+
+  body a.active{
+    font-weight: 700;
+  }
   
   /* Header styling */
   .header-section {
