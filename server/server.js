@@ -1,12 +1,14 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const nodemailer = require('nodemailer');
+const cors = require('cors');
 require('dotenv').config({ path: '.env.local' });
 
 
 const app = express();
 const PORT = process.env.PORT || 5100;
 app.use(bodyParser.json());
+app.use(cors());
 
 console.log(process.env.EMAIL_ADDRESS);
 console.log('EMAIL_PASSWORD:', process.env.EMAIL_PASSWORD);
@@ -20,7 +22,7 @@ const transporter = nodemailer.createTransport({
 });
 
 app.post('/send-email', (req, res) => {
-    const { to, from, subject, text } = req.bosy;
+    const { to, from, subject, text } = req.body;
     const mailOptions = {
         from: from,
         to: process.env.EMAIL_ADDRESS,
