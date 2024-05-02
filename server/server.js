@@ -25,7 +25,7 @@ app.post('/send-email', (req, res) => {
     const { to, from, subject, text } = req.body;
     console.log("From", from);
     const mailOptions = {
-        from: from,
+        from: '"Clean Power pro Website Support" <cleanpowerpro.web@gmail.com>',
         to: to,
         subject: subject,
         text: text

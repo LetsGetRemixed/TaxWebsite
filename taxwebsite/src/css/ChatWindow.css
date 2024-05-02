@@ -30,6 +30,7 @@
 
 .contact-us {
   flex-grow: 1;
+  margin-left: 15%;
   text-align: center;
   font-family: sans-serif;
   color: #696969;
@@ -37,6 +38,7 @@
 
 .sub-heading {
   margin-top: 0px;
+  margin-left: 4%;
   text-align: center;
   font-family: sans-serif;
   color: #696969;
@@ -125,6 +127,7 @@
 .input-field {
   height: 50%;
   margin-right: 0px;
+  margin-top: 10px;
   border-top: none !important; /* Set border only on the top */
   border-right: none !important; /* Remove border on the right */
   border-bottom: none !important; /* Remove border on the bottom */
@@ -144,7 +147,7 @@
   background-color: rgba(176, 204, 132, 0.8);
   color: #696969;
   border: none;
-  margin-top: 5px;
+  margin-top: 15px;
   margin-right: 2px;
   padding: 8px 15px;
   border-radius: 20px;
