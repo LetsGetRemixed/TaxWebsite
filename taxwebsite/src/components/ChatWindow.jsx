@@ -34,12 +34,39 @@ const ChatWindow = ({ isOpen, onClose }) => {
   ];
 
   const [messages, setMessages] = useState([{ text: questions[questionIndex], sender: 'chatbot', timestamp: new Date() }]);
+
+  const sendEmail = () => {
+    const messageWithInfo = `${userQuestion}\n\nName: ${name}\nEmail: ${email}`;
+    fetch('http://localhost:5100/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify({
+        to: 'isaiah12gage@gmail.com',
+        from: email,
+        subject: 'Clean Power Pro Support',
+        text: messageWithInfo
+      })
+    })
+    .then(response => {
+      if (response.ok) {
+        console.log("Email sent successfully");
+      } else {
+        console.log('Error sending email');
+      }
+    })
+    .catch(error => {
+      console.error('Error sending email', error);
+    })
+  };
   
   // This is where we will send email
   useEffect(() => {
     // This is when we will send email
     if (userQuestion !== '') {
       console.log('User Question:', userQuestion);
+      sendEmail();
     }
   }, [userQuestion]);
   
